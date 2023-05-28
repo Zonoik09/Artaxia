@@ -87,32 +87,32 @@ section {
   padding: 20px;
 }
 
-/* Primera sección*/
+/* Sección Twitch*/
 
-.First {
-  height: 40em;
+.Twitch {
+  height: 57em;
   background-image: url(../img/Fondo.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
 }
 
-.First .profile-box {
+.Twitch .profile-box {
   margin-top: 5em;
-  position: relative;
   display: inline-block;
   padding: 60px;
   padding-top: 80px;
   background-color: rgba(75, 75, 75, 0.7);
-  border: 0.3em solid black;
+  border: 0.3em solid #9146FF;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   align-items: center;
 }
 
-.First .profile-image {
+.Twitch .profile-image {
   margin-top: -20px;
   width: 150px;
   height: 150px;
@@ -121,15 +121,14 @@ section {
   background-size: cover;
 }
 
-.First button a{
+.Twitch button a{
   color: white;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Times New Roman', Times, serif ;
 }
 
-.First button {
-  position: relative;
+.Twitch button {
   z-index: 2;
   width: 150px;
   height: 50px;
@@ -146,23 +145,135 @@ section {
   border-radius: 5px 0 5px 0;
 }
 
-.First button:hover {
+.Twitch button:hover {
   background-size: 100% 100%;
 }
 
 
 
 
-/*Segunda seccion*/
-.Second {
-  background-color: #202020;
-  height: 40em;
-}
+/*Seccion Youtube*/
+.Youtube {
+    height: 57em;
+    background-image: url(../img/Fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+  
+  .Youtube .profile-box {
+    margin-top: 5em;
+    display: inline-block;
+    padding: 60px;
+    padding-top: 80px;
+    background-color: rgba(75, 75, 75, 0.7);
+    border: 0.3em solid #FF0000;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+  
+  .Youtube .profile-image {
+    margin-top: -20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(../img/perfil.jpg);
+    background-size: cover;
+  }
+  
+  .Youtube button a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif ;
+  }
+  
+  .Youtube button {
+    z-index: 2;
+    width: 150px;
+    height: 50px;
+    margin-top: 3em;
+    background-color: #2c2c2c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-image: linear-gradient(to right, rgb(255, 0, 0), hsl(0, 1%, 17%));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: background-size 0.5s ease-in-out;
+    border-radius: 5px 0 5px 0;
+  }
+  
+  .Youtube button:hover {
+    background-size: 100% 100%;
+  }
 
-.Third {
-  background-color: #000000;
-  height: 40em;
-}
+  /*Sección Discord */
+.Discord {
+    height: 57em;
+    background-image: url(../img/touhou.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+  }
+  
+  .Discord .profile-box {
+    margin-top: 5em;
+    display: inline-block;
+    padding: 60px;
+    padding-top: 80px;
+    background-color: rgba(75, 75, 75, 0.7);
+    border: 0.3em solid #5477f7;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    align-items: center;
+  }
+  
+  .Discord .profile-image {
+    margin-top: -20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url(../img/perfil.jpg);
+    background-size: cover;
+  }
+  
+  .Discord button a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif ;
+  }
+  
+  .Discord button {
+    z-index: 2;
+    width: 150px;
+    height: 50px;
+    margin-top: 3em;
+    background-color: #2c2c2c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    background-image: linear-gradient(to right, #5477f7, hsl(236, 100%, 60%));
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    transition: background-size 0.5s ease-in-out;
+    border-radius: 5px 0 5px 0;
+  }
+  
+  .Discord button:hover {
+    background-size: 100% 100%;
+  }
+
 /* Pie de pagina */
 footer {
   background-color: #2c2c2c;
