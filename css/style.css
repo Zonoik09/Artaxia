@@ -87,11 +87,43 @@ section {
   padding: 20px;
 }
 
+/* Primera sección*/
+
 .First {
-  background-color: #757575;
   height: 40em;
+  background-image: url(../img/Fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.First button {
+  position: relative;
+  z-index: 2;
+  width: 150px;
+  height: 50px;
+  margin-top: 28em; /* Se añade un margen superior de 2em */
+  background-color: #2c2c2c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  background-image: linear-gradient(to right, rgb(193, 0, 252), hsl(0, 1%, 17%));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  transition: background-size 0.5s ease-in-out;
+  border-radius: 5px 0 5px 0;
+}
+
+.First button:hover {
+  background-size: 100% 100%;
+}
+
+
+
+/*Segunda seccion*/
 .Second {
   background-color: #202020;
   height: 40em;
