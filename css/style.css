@@ -31,8 +31,6 @@ header {
   border-bottom: 1px solid #fff; /* Establecemos un borde inferior blanco */
 }
 
-
-
 /* Estilos para el menú de navegación */
 .menu {
   margin-top: 10px;
@@ -94,7 +92,7 @@ section {
   position: relative;
   display: flex;
   align-items: center;
-  height: 50em;
+  height: 57em;
   overflow: hidden;
   background-image: url(../img/fondo.jpg); /* Ruta de la imagen de fondo */
   background-size: cover;
@@ -104,7 +102,7 @@ section {
 
 .banner img {
   flex: 1;
-  height: 70%;
+  height: 60%;
   object-fit: contain;
   border: 2px solid black;
 }
@@ -193,14 +191,31 @@ footer p {
 /* Slider */
 .container {
   display: flex;
-  background-color: white;
+  background-color: #fdf6ee;
   height: 57em;
 }
 
-.text {
-  flex: 1;
-  color: black;
+.text-container {
+  max-width: 600px;
+  max-height: 500px;
   padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-left: 200px;
+  margin-top: 100px;
+  background-color: white;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 .slider-container {
@@ -208,6 +223,7 @@ footer p {
   width: 20%;
   margin-top: 100px;
   margin-right: 150px;
+  margin-left: 400px;
 }
 
 .slider {
@@ -218,6 +234,7 @@ footer p {
 
 .slide {
   display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .slide img {
@@ -253,10 +270,3 @@ footer p {
   width: 20px;
   height: 20px;
 }
-
-
-
-
-
-
-
