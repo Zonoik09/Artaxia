@@ -17,22 +17,44 @@
     </nav>
   </header>
   <main>
-    <section Id="Twitch" class="Twitch">
-      <div class="profile-box">
-        <div class="profile-image"></div>
-        <button> <a href="https://www.twitch.tv/zonoikk" target="_blank">TWITCH </a></button>
+    <section id="banner" class="banner">
+      <div class="banner-content">
+        <h1>Artaxia</h1>
+        <p>Descripción del banner</p>
+        <a href="#" class="banner-button">Botón</a>
       </div>
-    </section>
-    <section Id="Discord" class="Discord">
-      <div class="profile-box">
-        <div class="profile-image"></div>
-        <button> <a href="https://discord.gg/z5EFwUWbrZ" target="_blank">DISCORD </a></button>
-    </section>
-    <section Id="Youtube" class="Youtube">
-      <div class="profile-box">
-        <div class="profile-image"></div>
-        <button> <a href="https://www.youtube.com/@zonoik" target="_blank">YOUTUBE </a></button>
-    </section>
+      <img src="img/banner.jpg" alt="Imagen de fondo del banner">
+    </section>    
+    <div class="container">
+      <div class="text">Texto a la izquierda</div>
+      <div class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <a href="https://www.twitch.tv/zonoikk" target="_blank">
+              <img src="img/twitch.jpg" alt="Imagen 1">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://www.youtube.com/@zonoik" target="_blank">
+              <img src="img/youtube.jpg" alt="Imagen 2">
+            </a>
+          </div>
+          <div class="slide">
+            <a href="https://discord.gg/z5EFwUWbrZ" target="_blank">
+              <img src="img/discord.jpg" alt="Imagen 3">
+            </a>
+          </div>
+        </div>
+      <div class="slider-nav">
+        <button class="prev-btn">
+          <img src="img/atras.png" alt="Anterior">
+        </button>
+        <button class="next-btn">
+          <img src="img/siguiente.png" alt="Siguiente">
+        </button>
+      </div>
+      <script src="js/js.js"></script>
+    </div>    
   </main>
   <footer>
     <p>Artaxia</p>
