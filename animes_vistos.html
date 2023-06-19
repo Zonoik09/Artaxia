@@ -5,21 +5,41 @@
   <link rel="stylesheet" href="css/style3.css">
   <link rel="icon" type="image/x-icon" href="img/Zonoik.ico">
   <script>
+    function numerarFilas() {
+      var tabla = document.getElementById("tablaAnime");
+      var filas = tabla.getElementsByTagName("tr");
+
+      for (var i = 1; i < filas.length; i++) {
+        var contador = document.createElement("td");
+        contador.textContent = i;
+        filas[i].insertBefore(contador, filas[i].firstChild);
+      }
+    }
+
     function buscarPorLetra(letra) {
       var tabla = document.getElementById("tablaAnime");
       var filas = tabla.getElementsByTagName("tr");
-  
+
+      var contador = 0;
+
       for (var i = 1; i < filas.length; i++) {
-        var celda = filas[i].getElementsByTagName("td")[0];
+        var celda = filas[i].getElementsByTagName("td")[1];
         var contenido = celda.textContent || celda.innerText;
-  
+
         if (contenido.startsWith(letra)) {
           filas[i].style.display = "";
+          contador++;
         } else {
           filas[i].style.display = "none";
         }
       }
+
+      document.getElementById("contador").textContent = "Total: " + contador;
     }
+
+    window.onload = function() {
+      numerarFilas();
+    };
   </script>
 </head>
 <body>
@@ -66,6 +86,7 @@
       <table id="tablaAnime">
         <col>
         <tr>
+          <th>#</th>
           <th>LISTADO DE ANIME</th>
         </tr>
         <tr >
@@ -2890,10 +2911,6 @@
         </tr>
         <tr >
           <td >Zombieland Saga </td>
-        </tr>
-        <tr>
-          <td</td>
-          <td</td>
         </tr>
       </table>
     </div>
