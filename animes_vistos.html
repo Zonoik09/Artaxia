@@ -4,43 +4,94 @@
   <title>Artaxia - Animes</title>
   <link rel="stylesheet" href="css/style3.css">
   <link rel="icon" type="image/x-icon" href="img/Zonoik.ico">
-  <script>
-    function numerarFilas() {
-      var tabla = document.getElementById("tablaAnime");
-      var filas = tabla.getElementsByTagName("tr");
+<script>
+  function numerarFilas() {
+    var tabla = document.getElementById("tablaAnime");
+    var filas = tabla.getElementsByTagName("tr");
 
-      for (var i = 1; i < filas.length; i++) {
-        var contador = document.createElement("td");
-        contador.textContent = i;
-        filas[i].insertBefore(contador, filas[i].firstChild);
+    for (var i = 1; i < filas.length; i++) {
+      var contador = document.createElement("td");
+      contador.textContent = i;
+      filas[i].insertBefore(contador, filas[i].firstChild);
+    }
+  }
+
+  function buscarPorLetra(letra) {
+    var tabla = document.getElementById("tablaAnime");
+    var filas = tabla.getElementsByTagName("tr");
+
+    var contador = 0;
+
+    for (var i = 1; i < filas.length; i++) {
+      var celda = filas[i].getElementsByTagName("td")[1];
+      var contenido = celda.textContent || celda.innerText;
+
+      if (contenido.startsWith(letra)) {
+        filas[i].style.display = "";
+        contador++;
+      } else {
+        filas[i].style.display = "none";
       }
     }
 
-    function buscarPorLetra(letra) {
-      var tabla = document.getElementById("tablaAnime");
-      var filas = tabla.getElementsByTagName("tr");
+    document.getElementById("contador").textContent = "Total: " + contador;
+  }
 
-      var contador = 0;
+var elementosAMostrar = 15; // Número de elementos a mostrar inicialmente
+var elementosActuales = elementosAMostrar; // Número de elementos actualmente mostrados
 
-      for (var i = 1; i < filas.length; i++) {
-        var celda = filas[i].getElementsByTagName("td")[1];
-        var contenido = celda.textContent || celda.innerText;
+function numerarFilas() {
+  var tabla = document.getElementById("tablaAnime");
+  var filas = tabla.getElementsByTagName("tr");
 
-        if (contenido.startsWith(letra)) {
-          filas[i].style.display = "";
-          contador++;
-        } else {
-          filas[i].style.display = "none";
-        }
-      }
+  for (var i = 1; i < filas.length; i++) {
+    if (i <= elementosActuales) {
+      var contador = document.createElement("td");
+      contador.textContent = i;
+      filas[i].insertBefore(contador, filas[i].firstChild);
+      filas[i].style.display = ""; // Muestra la fila
+    } else {
+      filas[i].style.display = "none"; // Oculta las filas adicionales
+    }
+  }
+}
 
-      document.getElementById("contador").textContent = "Total: " + contador;
+function mostrarSiguientesDiez() {
+  var tabla = document.getElementById("tablaAnime");
+  var filas = tabla.getElementsByTagName("tr");
+
+  var elementosAMostrarSiguientes = elementosActuales + 10; // Calcula el número de elementos a mostrar
+
+  for (var i = elementosActuales + 1; i < filas.length; i++) {
+    if (i <= elementosAMostrarSiguientes) {
+      var contador = document.createElement("td");
+      contador.textContent = i;
+      filas[i].insertBefore(contador, filas[i].firstChild);
+      filas[i].style.display = ""; // Muestra la fila
+    } else {
+      filas[i].style.display = "none"; // Oculta las filas adicionales
+    }
+  }
+
+  elementosActuales = elementosAMostrarSiguientes; // Actualiza el número de elementos actualmente mostrados
+}
+
+  function limpiarBusqueda() {
+    var tabla = document.getElementById("tablaAnime");
+    var filas = tabla.getElementsByTagName("tr");
+
+    for (var i = 1; i < filas.length; i++) {
+      filas[i].style.display = "";
     }
 
-    window.onload = function() {
-      numerarFilas();
-    };
-  </script>
+    document.getElementById("contador").textContent = "Total: " + (filas.length - 1);
+  }
+
+  window.onload = function() {
+    numerarFilas();
+  };
+</script>
+
 </head>
 <body>
   <header>
@@ -148,10 +199,6 @@
         </tr>
         <tr >
           <td >abslute duo</td>
-    
-        </tr>
-        <tr >
-          <td >absolute duo</td>
     
         </tr>
         <tr >
@@ -1790,10 +1837,8 @@
     
         </tr>
         <tr >
-          <td ><span style='font-variant-ligatures: normal;
-      font-variant-caps: normal;orphans: 2;widows: 2;-webkit-text-stroke-width: 0px;
-      text-decoration-thickness: initial;text-decoration-style: initial;text-decoration-color: initial'>Megami-ryou
-              no Ryoubo-kun</span></td>
+          <td>Megami-ryou
+              no Ryoubo-kun</td>
     
         </tr>
         <tr >
@@ -2924,6 +2969,9 @@
           <td >Zombieland Saga </td>
         </tr>
       </table>
+      <div class="siguiente">
+      <button onclick="mostrarSiguientesDiez()">Mostrar más</button>
+      </div>
     </div>
   </main>
   <footer>
