@@ -37,25 +37,6 @@
     document.getElementById("contador").textContent = "Total: " + contador;
   }
 
-var elementosAMostrar = 15; // Número de elementos a mostrar inicialmente
-var elementosActuales = elementosAMostrar; // Número de elementos actualmente mostrados
-
-function numerarFilas() {
-  var tabla = document.getElementById("tablaAnime");
-  var filas = tabla.getElementsByTagName("tr");
-
-  for (var i = 1; i < filas.length; i++) {
-    if (i <= elementosActuales) {
-      var contador = document.createElement("td");
-      contador.textContent = i;
-      filas[i].insertBefore(contador, filas[i].firstChild);
-      filas[i].style.display = ""; // Muestra la fila
-    } else {
-      filas[i].style.display = "none"; // Oculta las filas adicionales
-    }
-  }
-}
-
 function mostrarSiguientesDiez() {
   var tabla = document.getElementById("tablaAnime");
   var filas = tabla.getElementsByTagName("tr");
@@ -105,7 +86,7 @@ function mostrarSiguientesDiez() {
     </nav>
   </header>
   <main>
-    <div class="letras">  <p>Buscar por letra:</p>
+    <div class="letras">  <p>BUSQUEDA POR CARACTERES:</p>
       <button onclick="buscarPorLetra('.')">.</button>
       <button onclick="buscarPorLetra('1')">1</button>
       <button onclick="buscarPorLetra('2')">2</button>
