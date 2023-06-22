@@ -3,7 +3,7 @@
 <head>
   <title>Artaxia - Animes</title>
   <link rel="stylesheet" href="css/style3.css">
-  <link rel="icon" type="image/x-icon" href="img/Zonoik.ico">
+  <link rel="icon" type="image/x-icon" href="img/icon.ico">
 <script>
   function numerarFilas() {
     var tabla = document.getElementById("tablaAnime");
@@ -37,26 +37,6 @@
     document.getElementById("contador").textContent = "Total: " + contador;
   }
 
-function mostrarSiguientesDiez() {
-  var tabla = document.getElementById("tablaAnime");
-  var filas = tabla.getElementsByTagName("tr");
-
-  var elementosAMostrarSiguientes = elementosActuales + 10; // Calcula el número de elementos a mostrar
-
-  for (var i = elementosActuales + 1; i < filas.length; i++) {
-    if (i <= elementosAMostrarSiguientes) {
-      var contador = document.createElement("td");
-      contador.textContent = i;
-      filas[i].insertBefore(contador, filas[i].firstChild);
-      filas[i].style.display = ""; // Muestra la fila
-    } else {
-      filas[i].style.display = "none"; // Oculta las filas adicionales
-    }
-  }
-
-  elementosActuales = elementosAMostrarSiguientes; // Actualiza el número de elementos actualmente mostrados
-}
-
   function limpiarBusqueda() {
     var tabla = document.getElementById("tablaAnime");
     var filas = tabla.getElementsByTagName("tr");
@@ -75,11 +55,11 @@ function mostrarSiguientesDiez() {
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">ARTAXIA</a></div>
+    <div class="logo"><a href="index.html">ZONOIK</a></div>
     <nav class="menu">
       <ul>
         <li><a href="index.html">INICIO</a></li>
-        <li><a href="sobre_nosotros.html">SOBRE NOSOTROS</a></li>
+        <li><a href="sobre_mi.html">SOBRE MI</a></li>
         <li><a href="animes_vistos.html">ANIMES</a></li>
       </ul>
     </nav>

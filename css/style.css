@@ -15,11 +15,11 @@ header {
 
 /* Estilos para el logo */
 .logo a{
-  color: #cc00ff;
-  font-size: 24px;
-  font-weight: bold;
+  color: #ae54f7;
+  font-size: 40px;
   position: relative; /* Añadimos posición relativa al elemento */
   text-decoration: none;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .logo a::after {
@@ -29,6 +29,11 @@ header {
   bottom: -2px; /* Ajustamos la posición vertical del borde inferior */
   width: 100%;
   border-bottom: 1px solid #fff; /* Establecemos un borde inferior blanco */
+}
+
+.logo a:hover {
+  bottom: -2px; /* Ajustamos la posición vertical del borde inferior */
+  border-bottom: 3px solid #ae54f7; /* Establecemos un borde inferior blanco */
 }
 
 /* Estilos para el menú de navegación */
@@ -110,7 +115,7 @@ section {
 .banner img {
   flex: 1;
   height: 50%;
-  object-fit: contain;
+  object-fit: cover;
   border: 2px solid black;
 }
 
@@ -229,7 +234,7 @@ footer p {
 
 .text-container h1 {
   font-size: 2rem;
-  color: #333333;
+  color: #ae54f7;
   margin-bottom: 20px;
   text-decoration: underline;
 }
